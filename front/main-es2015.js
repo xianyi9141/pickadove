@@ -130,7 +130,7 @@ module.exports = "<div class=\"sign-container container text-center\">\n    <ul 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"notfound\">\n\t<div class=\"notfound\">\n\t\t<div class=\"notfound-404\">\n\t\t\t<h1>404</h1>\n\t\t\t<h2>Page not found</h2>\n\t\t</div>\n\t\t<a href=\"#\">Homepage</a>\n\t</div>\n</div>"
+module.exports = "<div id=\"notfound\">\n\t<div class=\"notfound\">\n\t\t<div class=\"notfound-404\">\n\t\t\t<h1>404</h1>\n\t\t\t<h2>Page not found</h2>\n\t\t</div>\n\t\t<a href=\"\">Homepage</a>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -141,7 +141,7 @@ module.exports = "<div id=\"notfound\">\n\t<div class=\"notfound\">\n\t\t<div cl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"gallery-c row\">\n    <div class=\"col-lg-5th-1 col-xs-5th-2\" *ngFor=\"let advertiser of profiles\">\n        <div class=\"gallery-card\" [attr.id]=\"advertiser.id_user\">\n            <p [ngClass]=\"{'excellent-top' : advertiser.top, 'advertiser' : !advertiser.top}\">{{advertiser.firstname + \" \" + advertiser.lastname}}</p>\n            <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{advertiser.address}}</p>\n            <p class=\"status-c\"><i class=\"fa fa-circle status-i\" aria-hidden=\"true\"></i>online</p>\n            <div class=\"text-center avatar-container\">\n                <img class=\"avatar\" [src]=\"'http://192.168.1.140:4000/' + advertiser.imgurl\" (click)=\"selectAd(advertiser.id_user)\">\n                <img class=\"verfied-ad\" src=\"../../../../assets/img/gallery-verified.png\" *ngIf=\"advertiser.isVerified\">\n                <img class=\"featured-ad\" src=\"../../../../assets/img/gallery-featured.png\" *ngIf=\"advertiser.isFeatured\">\n            </div>\n            <div class=\"d-flex justify-content-start mark-gallery\">\n                <p class=\"cost-c\"><i class=\"fa fa-dollar cost-i\"></i>400</p>\n                <p class=\"heart-c\"><i class=\"fa fa-heart heart-i\" aria-hidden=\"true\"></i>{{advertiser.comments}}</p>\n                <p class=\"heart-broken-c\"><i class=\"fa fa-heartbeat heart-broken-i\" aria-hidden=\"true\"></i>{{advertiser.complaints}}</p>\n            </div>\n            <div class=\"container\">\n                <div class=\"d-flex justify-content-between match\">\n                    <p class=\"label-gallery\">Age</p>\n                    <p class=\"content-gallery\">{{advertiser.age}}</p>\n                </div>\n                <div class=\"d-flex justify-content-between match\">\n                    <p class=\"label-gallery\">Height</p>\n                    <p class=\"content-gallery\">{{advertiser.height}}</p>\n                </div>\n            </div>\n            <div class=\"excellent-bottom\" *ngIf=\"advertiser.top\"></div>\n        </div>\n    </div>\n</div>\n"
+module.exports = "\n<div class=\"gallery-c row\">\n    <div class=\"col-lg-5th-1 col-xs-5th-2\" *ngFor=\"let advertiser of profiles\">\n        <div class=\"gallery-card\" [attr.id]=\"advertiser.id_user\">\n            <p [ngClass]=\"{'excellent-top' : advertiser.top, 'advertiser' : !advertiser.top}\">{{advertiser.firstname + \" \" + advertiser.lastname}}</p>\n            <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{advertiser.address}}</p>\n            <p class=\"status-c\"><i class=\"fa fa-circle status-i\" aria-hidden=\"true\"></i>online</p>\n            <div class=\"text-center avatar-container\">\n                <img class=\"avatar\" [src]=\"usersService.BASE_URL + advertiser.imgurl\" (click)=\"selectAd(advertiser.id_user)\">\n                <img class=\"verfied-ad\" src=\"../../../../assets/img/gallery-verified.png\" *ngIf=\"advertiser.isVerified\">\n                <img class=\"featured-ad\" src=\"../../../../assets/img/gallery-featured.png\" *ngIf=\"advertiser.isFeatured\">\n            </div>\n            <div class=\"d-flex justify-content-start mark-gallery\">\n                <p class=\"cost-c\"><i class=\"fa fa-dollar cost-i\"></i>400</p>\n                <p class=\"heart-c\"><i class=\"fa fa-heart heart-i\" aria-hidden=\"true\"></i>{{advertiser.comments}}</p>\n                <p class=\"heart-broken-c\"><i class=\"fa fa-heartbeat heart-broken-i\" aria-hidden=\"true\"></i>{{advertiser.complaints}}</p>\n            </div>\n            <div class=\"container\">\n                <div class=\"d-flex justify-content-between match\">\n                    <p class=\"label-gallery\">Age</p>\n                    <p class=\"content-gallery\">{{advertiser.age}}</p>\n                </div>\n                <div class=\"d-flex justify-content-between match\">\n                    <p class=\"label-gallery\">Height</p>\n                    <p class=\"content-gallery\">{{advertiser.height}}</p>\n                </div>\n            </div>\n            <div class=\"excellent-bottom\" *ngIf=\"advertiser.top\"></div>\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -163,7 +163,7 @@ module.exports = "<div class=\"text-center p-3 lock\">\n    <img src=\"../../../
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p class=\"recent-title\">Recent Profiles</p>\n<div class=\"recent-card\" *ngFor=\"let advertiser of profiles\">\n    <p class=\"advertiser\">{{advertiser.firstname + \" \" + advertiser.lastname}}</p>\n    <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{advertiser.address}}</p>\n    <p class=\"status-c\"><i class=\"fa fa-circle status-i\" aria-hidden=\"true\"></i>Message Me</p>\n    <div class=\"text-center avatar-container\">\n        <img class=\"avatar\" [src]=\"'http://192.168.1.140:4000/' +  advertiser.imgurl\" (click)=\"selectAd(advertiser.id_user)\">\n    </div>\n    <div class=\"d-flex justify-content-between match\">\n        <p class=\"label-recent\">Age</p>\n        <p class=\"content-recent\">{{advertiser.age}}</p>\n    </div>\n</div>"
+module.exports = "<p class=\"recent-title\">Recent Profiles</p>\n<div class=\"recent-card\" *ngFor=\"let advertiser of profiles\">\n    <p class=\"advertiser\">{{advertiser.firstname + \" \" + advertiser.lastname}}</p>\n    <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{advertiser.address}}</p>\n    <p class=\"status-c\"><i class=\"fa fa-circle status-i\" aria-hidden=\"true\"></i>Message Me</p>\n    <div class=\"text-center avatar-container\">\n        <img class=\"avatar\" [src]=\"usersService.BASE_URL +  advertiser.imgurl\" (click)=\"selectAd(advertiser.id_user)\">\n    </div>\n    <div class=\"d-flex justify-content-between match\">\n        <p class=\"label-recent\">Age</p>\n        <p class=\"content-recent\">{{advertiser.age}}</p>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -196,7 +196,7 @@ module.exports = "<div class=\"row p-3\">\n    <div class=\"col-md-2 text-center
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"profile-c\" *ngIf=\"result\">\n    <p class=\"title\">TOP PROFILE</p>\n    <div class=\"row\">\n        <div class=\"col-lg-6 row\">\n            <img class=\"avatar col-md-4\" [src]=\"'http://192.168.1.140:4000/' + result.imgurl\" (click)=\"selectAd(result.id_user)\">\n            <div class=\"container col-md-8\">\n                <div>\n                    <div class=\"row\">\n                        <div class=\"col-lg-6\">\n                            <p class=\"name\">{{result.firstname + \" \" + result.lastname}}</p>\n                            <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{result.address}}</p>\n                            <p class=\"status-c\"><i class=\"fa fa-circle status-i\" aria-hidden=\"true\"></i>online</p>\n                            <div class=\"d-flex justify-content-start\">\n                                <p class=\"heart-c\"><i class=\"fa fa-heart heart-i\" aria-hidden=\"true\"></i>{{result.comments}}</p>\n                                <p class=\"heart-broken-c\"><i class=\"fa fa-heartbeat heart-broken-i\" aria-hidden=\"true\"></i>{{result.complaints}}</p>\n                            </div>\n                        </div>\n                        <div class=\"col-lg-6\">\n                            <p class=\"contact-no\">Contact No</p>\n                            <p class=\"contact-number\">{{result.contact_mobile}}</p>\n                            <p class=\"damage-c\" *ngIf=\"this.reavel\">{{result.contact_mobile}}</p>\n                            <p class=\"damage-c\" *ngIf=\"!this.reavel\">{{result.contact_mobile_unreveal}}</p>\n\n                            <p class=\"reveal-number\"  *ngIf=\"!this.reavel\" (click)=\"revealContant()\">Reveal Number</p>\n                        </div>\n                    </div>\n                </div>\n                <br>\n                <div class=\"comment\" *ngIf=\"result.comment\">\n                    <p class=comment-name>{{result.comment.firstname + \" \" + result.comment.lastname}}</p>\n                    <p class=\"comment-time\">{{result.comment.created_at | date: 'dd/MM/yyyy'}}</p>\n                    <p class=\"comment-content\">{{result.comment.comment}}</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-lg-6 slider d-flex justify-content-center\">\n            <i class=\"fa fa-chevron-left left\" (click)=\"leftImage()\"></i>\n            <mdb-carousel [isControls]=\"false\" class=\"carousel-multi-item multi-animation carousel_profile h-100\" [type]=\"'carousel-multi-item'\"\n                [animation]=\"'slide'\">\n                <mdb-carousel-item *ngFor=\"let item of slides; let i = index\" class=\"item_carousel_profile h-80\">\n                    <div class=\"col-md-4\" [ngClass]=\"{'d-none d-md-block': cardIndex !== 0}\" *ngFor=\"let card of item; let cardIndex = index\">\n                    <mdb-card class=\"my- h-80\">\n                        <mdb-card-img [src]=\"card.img\" alt=\"Card image cap\"></mdb-card-img>\n                    </mdb-card>\n                    </div>\n                </mdb-carousel-item>\n            </mdb-carousel>\n            <i class=\"fa fa-chevron-right right\" (click)=\"rightImage()\"></i>\n        </div>\n    </div>\n    <img *ngIf=\"result.isFeatured\" src=\"../../../../assets/img/featured-top.png\" class=\"featured\">\n    <img *ngIf=\"result.isVerified\" src=\"../../../../assets/img/verfied-top.png\" class=\"verified\">\n</div>"
+module.exports = "<div class=\"profile-c\" *ngIf=\"result\">\n    <p class=\"title\">TOP PROFILE</p>\n    <div class=\"row\">\n        <div class=\"col-lg-6 row\">\n            <img class=\"avatar col-md-4\" [src]=\"usersService.BASE_URL + result.imgurl\" (click)=\"selectAd(result.id_user)\">\n            <div class=\"container col-md-8\">\n                <div>\n                    <div class=\"row\">\n                        <div class=\"col-lg-6\">\n                            <p class=\"name\">{{result.firstname + \" \" + result.lastname}}</p>\n                            <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{result.address}}</p>\n                            <p class=\"status-c\"><i class=\"fa fa-circle status-i\" aria-hidden=\"true\"></i>online</p>\n                            <div class=\"d-flex justify-content-start\">\n                                <p class=\"heart-c\"><i class=\"fa fa-heart heart-i\" aria-hidden=\"true\"></i>{{result.comments}}</p>\n                                <p class=\"heart-broken-c\"><i class=\"fa fa-heartbeat heart-broken-i\" aria-hidden=\"true\"></i>{{result.complaints}}</p>\n                            </div>\n                        </div>\n                        <div class=\"col-lg-6\">\n                            <p class=\"contact-no\">Contact No</p>\n                            <p class=\"contact-number\">{{result.contact_mobile}}</p>\n                            <p class=\"damage-c\" *ngIf=\"this.reavel\">{{result.contact_mobile}}</p>\n                            <p class=\"damage-c\" *ngIf=\"!this.reavel\">{{result.contact_mobile_unreveal}}</p>\n\n                            <p class=\"reveal-number\"  *ngIf=\"!this.reavel\" (click)=\"revealContant()\">Reveal Number</p>\n                        </div>\n                    </div>\n                </div>\n                <br>\n                <div class=\"comment\" *ngIf=\"result.comment\">\n                    <p class=comment-name>{{result.comment.firstname + \" \" + result.comment.lastname}}</p>\n                    <p class=\"comment-time\">{{result.comment.created_at | date: 'dd/MM/yyyy'}}</p>\n                    <p class=\"comment-content\">{{result.comment.comment}}</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-lg-6 slider d-flex justify-content-center\">\n            <i class=\"fa fa-chevron-left left\" (click)=\"leftImage()\"></i>\n            <mdb-carousel [isControls]=\"false\" class=\"carousel-multi-item multi-animation carousel_profile h-100\" [type]=\"'carousel-multi-item'\"\n                [animation]=\"'slide'\">\n                <mdb-carousel-item *ngFor=\"let item of slides; let i = index\" class=\"item_carousel_profile h-80\">\n                    <div class=\"col-md-4\" [ngClass]=\"{'d-none d-md-block': cardIndex !== 0}\" *ngFor=\"let card of item; let cardIndex = index\">\n                    <mdb-card class=\"my- h-80\">\n                        <mdb-card-img [src]=\"card.img\" alt=\"Card image cap\"></mdb-card-img>\n                    </mdb-card>\n                    </div>\n                </mdb-carousel-item>\n            </mdb-carousel>\n            <i class=\"fa fa-chevron-right right\" (click)=\"rightImage()\"></i>\n        </div>\n    </div>\n    <img *ngIf=\"result.isFeatured\" src=\"../../../../assets/img/featured-top.png\" class=\"featured\">\n    <img *ngIf=\"result.isVerified\" src=\"../../../../assets/img/verfied-top.png\" class=\"verified\">\n</div>"
 
 /***/ }),
 
@@ -339,7 +339,7 @@ module.exports = "<div class=\"service\">\n    <p class=\"title\">Comments</p>\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"edit\">\n    <div class=\"row\">\n        <p class=\"col-md-6 label\">Birthday</p>\n        <mat-form-field class=\"col-md-6\">\n            <input matInput [matDatepicker]=\"picker1\" [formControl]=\"date\" [(value)]=\"userinfo.birthday\" (dateChange)=\"changeOtherValue({index: 'birthday', val: $event.target.value})\">\n            <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>\n            <mat-datepicker #picker1></mat-datepicker>\n        </mat-form-field>\n        <div class=\"text-right container col-md-5\">\n            <mat-error *ngIf=\"userinfo.birthday_error\">requried!</mat-error>\n        </div>\n    </div>\n    <div class=\"row\">\n        <p class=\"col-md-6 label\">Height</p>\n        <mat-form-field class=\"col-md-6\">\n            <input type=\"number\" matInput [(value)]=\"userinfo.height\" (input)=\"changeOtherValue({index: 'height', val: $event.target.value})\">\n            <mat-icon matSuffix>mode_edit</mat-icon>\n        </mat-form-field>\n        <div class=\"text-right container col-md-5\">\n            <mat-error *ngIf=\"userinfo.height_error\">requried!</mat-error>\n        </div>\n    </div>\n    <div *ngFor=\"let field of fields; let i = index\">\n        <div class=\"row\" *ngIf=\"!field.field_type\">\n            <p class=\"col-md-6 label\">{{field.label}}</p>\n            <mat-form-field class=\"col-md-6\">\n                <input type=\"text\" matInput [(value)]=\"field.selected\" (input)=\"changeValue({index: i, val: $event.target.value})\" >\n                <mat-icon matSuffix>mode_edit</mat-icon>\n            </mat-form-field>\n            <div class=\"text-right container col-md-5\">\n                <mat-error *ngIf=\"field.error\">requried!</mat-error>\n            </div>\n        </div>\n        <div class=\"row\" *ngIf=\"field.field_type\">\n            <p class=\"col-md-6 label\">{{field.label}}</p>\n            <mat-form-field class=\"col-md-6\">\n                <mat-select [id]=\"'admin'+field.id_admin\" [(value)]=\"field.selected\">\n                    <mat-option value=\"10px\" *ngFor=\"let option of field.combo\" [value]=\"option.id\">{{option.content}}</mat-option>\n                </mat-select>\n            </mat-form-field>\n        </div>\n    </div>\n    <div class=\"container \">\n        <div class=\"contact-info\"><i class=\"fa fa-phone phone-i\"></i>Contact Info</div>\n    </div>\n    <div class=\"row\">\n        <p class=\"col-md-6 label\">Preffered Contact Method</p>\n        <mat-form-field class=\"col-md-6\">\n            <input type=\"text\" matInput [(value)]=\"userinfo.contact_preferred\" (input)=\"changeOtherValue({index: 'contact_preferred', val: $event.target.value})\">\n            <mat-icon matSuffix>mode_edit</mat-icon>\n        </mat-form-field>\n    </div>\n    <div class=\"row\">\n        <p class=\"col-md-6 label\">Mobile number</p>\n        <mat-form-field class=\"col-md-6\">\n            <input type=\"text\" matInput [(value)]=\"userinfo.contact_mobile\" (input)=\"changeOtherValue({index: 'contact_mobile', val: $event.target.value})\">\n            <mat-icon matSuffix>mode_edit</mat-icon>\n        </mat-form-field>\n        <div class=\"row\">\n            <div class=\"col-md-6 d-flex justify-content-center\">\n                <!-- <div class=\"whatsapp\"></div> -->\n                <i class=\"fa fa-whatsapp othercontact-i\"></i>\n                <mat-form-field class=\"col-md-8\">\n                    <input type=\"text\" matInput [(value)]=\"userinfo.contact_whatsapp\" (input)=\"changeOtherValue({index: 'contact_whatsapp', val: $event.target.value})\">\n                    <mat-icon matSuffix>mode_edit</mat-icon>\n                </mat-form-field>\n            </div>\n            <div class=\"col-md-6 d-flex justify-content-center\">\n                <!-- <div class=\"wechat\"></div> -->\n                <i class=\"fa fa-weixin othercontact-i\"></i>\n                <mat-form-field class=\"col-md-8\">\n                    <input type=\"text\" matInput [(value)]=\"userinfo.contact_wechat\" (input)=\"changeOtherValue({index: 'contact_wechat', val: $event.target.value})\">\n                    <mat-icon matSuffix>mode_edit</mat-icon>\n                </mat-form-field>\n            </div>\n        </div>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"others-contact\">OTHERS CONTACTS</p>\n        <div class=\"row others-contact-c\">\n            <div class=\"col-md-6 d-flex justify-content-center\" *ngFor=\"let contact of userinfo.otherContacts; let i = index\">\n                <img height=\"40px\" [ngStyle]=\"{'background-image': 'url(' + 'http://192.168.1.140:4000/' + contact.icon + ')'}\">\n                <mat-form-field class=\"col-md-8\">\n                    <input type=\"text\" matInput [(value)]=\"contact.content\" placeholder=\"Contact\" (input)=\"changeOtherContact({object: contact, val: $event.target.value})\">\n                    <mat-icon matSuffix>mode_edit</mat-icon>\n                </mat-form-field>        \n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"edit\">\n    <div class=\"row\">\n        <p class=\"col-md-6 label\">Birthday</p>\n        <mat-form-field class=\"col-md-6\">\n            <input matInput [matDatepicker]=\"picker1\" [formControl]=\"date\" [(value)]=\"userinfo.birthday\" (dateChange)=\"changeOtherValue({index: 'birthday', val: $event.target.value})\">\n            <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>\n            <mat-datepicker #picker1></mat-datepicker>\n        </mat-form-field>\n        <div class=\"text-right container col-md-5\">\n            <mat-error *ngIf=\"userinfo.birthday_error\">requried!</mat-error>\n        </div>\n    </div>\n    <div class=\"row\">\n        <p class=\"col-md-6 label\">Height</p>\n        <mat-form-field class=\"col-md-6\">\n            <input type=\"number\" matInput [(value)]=\"userinfo.height\" (input)=\"changeOtherValue({index: 'height', val: $event.target.value})\">\n            <mat-icon matSuffix>mode_edit</mat-icon>\n        </mat-form-field>\n        <div class=\"text-right container col-md-5\">\n            <mat-error *ngIf=\"userinfo.height_error\">requried!</mat-error>\n        </div>\n    </div>\n    <div *ngFor=\"let field of fields; let i = index\">\n        <div class=\"row\" *ngIf=\"!field.field_type\">\n            <p class=\"col-md-6 label\">{{field.label}}</p>\n            <mat-form-field class=\"col-md-6\">\n                <input type=\"text\" matInput [(value)]=\"field.selected\" (input)=\"changeValue({index: i, val: $event.target.value})\" >\n                <mat-icon matSuffix>mode_edit</mat-icon>\n            </mat-form-field>\n            <div class=\"text-right container col-md-5\">\n                <mat-error *ngIf=\"field.error\">requried!</mat-error>\n            </div>\n        </div>\n        <div class=\"row\" *ngIf=\"field.field_type\">\n            <p class=\"col-md-6 label\">{{field.label}}</p>\n            <mat-form-field class=\"col-md-6\">\n                <mat-select [id]=\"'admin'+field.id_admin\" [(value)]=\"field.selected\">\n                    <mat-option value=\"10px\" *ngFor=\"let option of field.combo\" [value]=\"option.id\">{{option.content}}</mat-option>\n                </mat-select>\n            </mat-form-field>\n        </div>\n    </div>\n    <div class=\"container \">\n        <div class=\"contact-info\"><i class=\"fa fa-phone phone-i\"></i>Contact Info</div>\n    </div>\n    <div class=\"row\">\n        <p class=\"col-md-6 label\">Preffered Contact Method</p>\n        <mat-form-field class=\"col-md-6\">\n            <input type=\"text\" matInput [(value)]=\"userinfo.contact_preferred\" (input)=\"changeOtherValue({index: 'contact_preferred', val: $event.target.value})\">\n            <mat-icon matSuffix>mode_edit</mat-icon>\n        </mat-form-field>\n    </div>\n    <div class=\"row\">\n        <p class=\"col-md-6 label\">Mobile number</p>\n        <mat-form-field class=\"col-md-6\">\n            <input type=\"text\" matInput [(value)]=\"userinfo.contact_mobile\" (input)=\"changeOtherValue({index: 'contact_mobile', val: $event.target.value})\">\n            <mat-icon matSuffix>mode_edit</mat-icon>\n        </mat-form-field>\n        <div class=\"row\">\n            <div class=\"col-md-6 d-flex justify-content-center\">\n                <!-- <div class=\"whatsapp\"></div> -->\n                <i class=\"fa fa-whatsapp othercontact-i\"></i>\n                <mat-form-field class=\"col-md-8\">\n                    <input type=\"text\" matInput [(value)]=\"userinfo.contact_whatsapp\" (input)=\"changeOtherValue({index: 'contact_whatsapp', val: $event.target.value})\">\n                    <mat-icon matSuffix>mode_edit</mat-icon>\n                </mat-form-field>\n            </div>\n            <div class=\"col-md-6 d-flex justify-content-center\">\n                <!-- <div class=\"wechat\"></div> -->\n                <i class=\"fa fa-weixin othercontact-i\"></i>\n                <mat-form-field class=\"col-md-8\">\n                    <input type=\"text\" matInput [(value)]=\"userinfo.contact_wechat\" (input)=\"changeOtherValue({index: 'contact_wechat', val: $event.target.value})\">\n                    <mat-icon matSuffix>mode_edit</mat-icon>\n                </mat-form-field>\n            </div>\n        </div>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"others-contact\">OTHERS CONTACTS</p>\n        <div class=\"row others-contact-c\">\n            <div class=\"col-md-6 d-flex justify-content-center\" *ngFor=\"let contact of userinfo.otherContacts; let i = index\">\n                <img height=\"40px\" [ngStyle]=\"{'background-image': 'url(' + usersService.BASE_URL + contact.icon + ')'}\">\n                <mat-form-field class=\"col-md-8\">\n                    <input type=\"text\" matInput [(value)]=\"contact.content\" placeholder=\"Contact\" (input)=\"changeOtherContact({object: contact, val: $event.target.value})\">\n                    <mat-icon matSuffix>mode_edit</mat-icon>\n                </mat-form-field>        \n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -460,7 +460,7 @@ module.exports = "<div class=\"service\">\n    <p class=\"title\">Comments</p>\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"title-header\">\n    <p class=\"title\">Image Gallery</p>\n</div>\n<div class=\"row gallery\">\n    <div class=\"col-md-3 col-sm-6 col-xs-6 gallery-item\" *ngFor=\"let image of galleries\" id={{image.id}}>\n        <div class=\"img-card text-center\">\n            <div class=\"avatar\" [ngStyle]=\"{'background-image': 'url(' + 'http://192.168.1.140:4000/' + image.imgurl + ')'}\">\n                <img *ngIf=\"image.islock\" src=\"../../../../../assets/img/lock.png\" class=\"lock\">\n                <img src=\"../../../../../assets/img/check.png\" class=\"check\">\n            </div>\n            <div class=\"d-flex justify-content-end m-2\">\n                <img class=\"p-1 review\" src=\"../../../../../assets/img/top.png\">\n                <p>1</p>\n                <img class=\"p-1 review\" src=\"../../../../../assets/img/showed.png\">\n                <p>5</p>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"title-header\">\n    <p class=\"title\">Image Gallery</p>\n</div>\n<div class=\"row gallery\">\n    <div class=\"col-md-3 col-sm-6 col-xs-6 gallery-item\" *ngFor=\"let image of galleries\" id={{image.id}}>\n        <div class=\"img-card text-center\">\n            <div class=\"avatar\" [ngStyle]=\"{'background-image': 'url(' + usersService.BASE_URL + image.imgurl + ')'}\">\n                <img *ngIf=\"image.islock\" src=\"../../../../../assets/img/lock.png\" class=\"lock\">\n                <img src=\"../../../../../assets/img/check.png\" class=\"check\">\n            </div>\n            <div class=\"d-flex justify-content-end m-2\">\n                <img class=\"p-1 review\" src=\"../../../../../assets/img/top.png\">\n                <p>1</p>\n                <img class=\"p-1 review\" src=\"../../../../../assets/img/showed.png\">\n                <p>5</p>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -471,7 +471,7 @@ module.exports = "<div class=\"title-header\">\n    <p class=\"title\">Image Gal
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" *ngIf=\"userinfo\">\n    <div class=\"col-md-6\">\n        <p class=\"name\">{{userinfo.firstname + \" \" + userinfo.lastname}}</p>\n        <p class=\"status\">online</p>\n        <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{userinfo.locationInfo.address + \" \" + userinfo.locationInfo.state}}</p>\n    </div>\n    <div class=\"col-md-6 text-center\">\n        <i class=\"fa fa-comments-o chat-i\" aria-hidden=\"true\"></i>\n        <p class=\"chat-l\">Chat Here</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Birthday</p>\n        <p class=\"damage-c\">{{userinfo.birthday | date: 'dd/MM/yyyy'}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Heigh</p>\n        <p class=\"damage-c\">{{userinfo.height}}</p>\n    </div>\n    <div class=\"container-ps\" *ngFor=\"let field of userinfo.adminFields\">\n        <p class=\"damage-l\">{{field.label}}</p>\n        <p class=\"damage-c\" *ngIf=\"field.field_type\">{{field.val}}</p>\n        <p class=\"damage-c\" *ngIf=\"!field.field_type\">{{field.content_entry}}</p>\n    </div>\n    <div class=\"container \">\n        <div class=\"contact-info\"><i class=\"fa fa-phone phone-i\"></i>Contact Info</div>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Preffered Contact Method</p>\n        <p class=\"damage-c\">{{userinfo.contact_preferred}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Mobile number</p>\n        <p class=\"damage-c\">{{userinfo.contact_mobile}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"pull-left\"><i class=\"fa fa-whatsapp othercontact-i\"></i>{{userinfo.contact_whatsapp}}</p>\n        <p class=\"pull-right\"><i class=\"fa fa-weixin othercontact-i\"></i>{{userinfo.contact_wechat}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"others-contact\">OTHERS CONTACTS</p>\n        <div class=\"row others-contact-c m-2\">\n            <div class=\"col-md-6\" *ngFor=\"let contact of userinfo.otherContacts\">\n                <p><img height=\"40px\" [ngStyle]=\"{'background-image': 'url(' + 'http://192.168.1.140:4000/' + contact.icon + ')'}\"><span class=\"phone\">{{contact.content}}</span></p>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"row\" *ngIf=\"userinfo\">\n    <div class=\"col-md-6\">\n        <p class=\"name\">{{userinfo.firstname + \" \" + userinfo.lastname}}</p>\n        <p class=\"status\">online</p>\n        <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{userinfo.locationInfo.address + \" \" + userinfo.locationInfo.state}}</p>\n    </div>\n    <div class=\"col-md-6 text-center\">\n        <i class=\"fa fa-comments-o chat-i\" aria-hidden=\"true\"></i>\n        <p class=\"chat-l\">Chat Here</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Birthday</p>\n        <p class=\"damage-c\">{{userinfo.birthday | date: 'dd/MM/yyyy'}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Heigh</p>\n        <p class=\"damage-c\">{{userinfo.height}}</p>\n    </div>\n    <div class=\"container-ps\" *ngFor=\"let field of userinfo.adminFields\">\n        <p class=\"damage-l\">{{field.label}}</p>\n        <p class=\"damage-c\" *ngIf=\"field.field_type\">{{field.val}}</p>\n        <p class=\"damage-c\" *ngIf=\"!field.field_type\">{{field.content_entry}}</p>\n    </div>\n    <div class=\"container \">\n        <div class=\"contact-info\"><i class=\"fa fa-phone phone-i\"></i>Contact Info</div>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Preffered Contact Method</p>\n        <p class=\"damage-c\">{{userinfo.contact_preferred}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Mobile number</p>\n        <p class=\"damage-c\">{{userinfo.contact_mobile}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"pull-left\"><i class=\"fa fa-whatsapp othercontact-i\"></i>{{userinfo.contact_whatsapp}}</p>\n        <p class=\"pull-right\"><i class=\"fa fa-weixin othercontact-i\"></i>{{userinfo.contact_wechat}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"others-contact\">OTHERS CONTACTS</p>\n        <div class=\"row others-contact-c m-2\">\n            <div class=\"col-md-6\" *ngFor=\"let contact of userinfo.otherContacts\">\n                <p><img height=\"40px\" [ngStyle]=\"{'background-image': 'url(' + usersService.BASE_URL + contact.icon + ')'}\"><span class=\"phone\">{{contact.content}}</span></p>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -570,7 +570,7 @@ module.exports = "<div class=\"naviagtion\">\n    <nav class=\"navbar navbar-exp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-center\" *ngIf=\"userInfo\">\n    <div class=\"avatar\" height=\"200\" [ngStyle]=\"{'background-image': 'url(' + 'http://192.168.1.140:4000/'+userInfo.imgurl + ')'}\">\n        <div class=\"featured\" *ngIf=\"userinfo && userinfo.isFeatured\">FEATURED</div>\n        <div class=\"verified\" *ngIf=\"userinfo && userinfo.isVerified\">VERIFIED</div>\n    </div>\n</div>    "
+module.exports = "<div class=\"text-center\" *ngIf=\"userInfo\">\n    <div class=\"avatar\" height=\"200\" [ngStyle]=\"{'background-image': 'url(' + usersService.BASE_URL+userInfo.imgurl + ')'}\">\n        <div class=\"featured\" *ngIf=\"userinfo && userinfo.isFeatured\">FEATURED</div>\n        <div class=\"verified\" *ngIf=\"userinfo && userinfo.isVerified\">VERIFIED</div>\n    </div>\n</div>    "
 
 /***/ }),
 
@@ -625,7 +625,7 @@ module.exports = "<div class=\"title-header\">\n    <p class=\"title\">Image Gal
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" *ngIf=\"userInfo\">\n    <div class=\"col-md-6\">\n        <p class=\"name\">{{userInfo.firstname + \" \" + userInfo.lastname}}</p>\n        <p class=\"status\">online</p>\n        <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{userInfo.address + \" \" + userInfo.state}}</p>\n    </div>\n    <div class=\"col-md-6 text-center\">\n        <i class=\"fa fa-comments-o chat-i\" aria-hidden=\"true\"></i>\n        <p class=\"chat-l\">Chat Here</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Birthday</p>\n        <p class=\"damage-c\">{{userInfo.birthday | date: 'dd/MM/yyyy'}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Heigh</p>\n        <p class=\"damage-c\">{{userInfo.height}}</p>\n    </div>\n    <div class=\"container-ps\" *ngFor=\"let field of userInfo.adminFields\">\n        <p class=\"damage-l\">{{field.label}}</p>\n        <p class=\"damage-c\" *ngIf=\"field.field_type\">{{field.val}}</p>\n        <p class=\"damage-c\" *ngIf=\"!field.field_type\">{{field.content_entry}}</p>\n    </div>\n    <div class=\"container \">\n        <div class=\"contact-info\"><i class=\"fa fa-phone phone-i\"></i>Contact Info</div>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Preffered Contact Method</p>\n        <p class=\"damage-c\">{{userInfo.contact_preferred}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Mobile number</p>\n        <p class=\"damage-c\" *ngIf=\"this.reavel\">{{userInfo.contact_mobile}}</p>\n        <p class=\"damage-c\" *ngIf=\"!this.reavel\">{{userInfo.contact_mobile_unreveal}}</p>\n    </div>\n    <p class=\"underline container-ps text-right\" *ngIf=\"!this.reavel\" (click)=\"revealContant()\">Click Here To Reveal</p>\n    <div class=\"row container-ps\">\n        <div class=\"col-md-6 d-flex justify-content-center\">\n            <!-- <div class=\"whatsapp\"></div> -->\n            <i class=\"fa fa-whatsapp othercontact-i\"></i>\n            <p class=\"phone\">{{userInfo.contact_whatsapp}}</p>\n        </div>\n        <div class=\"col-md-6 d-flex justify-content-center\">\n            <!-- <div class=\"wechat\"></div> -->\n            <i class=\"fa fa-weixin othercontact-i\"></i>\n            <p class=\"phone\">{{userInfo.contact_wechat}}</p>\n        </div>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"others-contact\">OTHERS CONTACTS</p>\n        <div class=\"row others-contact-c m-2\">\n            <div class=\"col-md-6\" *ngFor=\"let contact of userInfo.otherContacts\">\n                <p><img height=\"40px\" [ngStyle]=\"{'background-image': 'url(' + 'http://192.168.1.140:4000/' + contact.icon + ')'}\"><span class=\"phone\">{{contact.content}}</span></p>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"row\" *ngIf=\"userInfo\">\n    <div class=\"col-md-6\">\n        <p class=\"name\">{{userInfo.firstname + \" \" + userInfo.lastname}}</p>\n        <p class=\"status\">online</p>\n        <p class=\"marker-c\"><i class=\"fa fa-map-marker marker-i\" aria-hidden=\"true\"></i>{{userInfo.address + \" \" + userInfo.state}}</p>\n    </div>\n    <div class=\"col-md-6 text-center\">\n        <i class=\"fa fa-comments-o chat-i\" aria-hidden=\"true\"></i>\n        <p class=\"chat-l\">Chat Here</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Birthday</p>\n        <p class=\"damage-c\">{{userInfo.birthday | date: 'dd/MM/yyyy'}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Heigh</p>\n        <p class=\"damage-c\">{{userInfo.height}}</p>\n    </div>\n    <div class=\"container-ps\" *ngFor=\"let field of userInfo.adminFields\">\n        <p class=\"damage-l\">{{field.label}}</p>\n        <p class=\"damage-c\" *ngIf=\"field.field_type\">{{field.val}}</p>\n        <p class=\"damage-c\" *ngIf=\"!field.field_type\">{{field.content_entry}}</p>\n    </div>\n    <div class=\"container \">\n        <div class=\"contact-info\"><i class=\"fa fa-phone phone-i\"></i>Contact Info</div>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Preffered Contact Method</p>\n        <p class=\"damage-c\">{{userInfo.contact_preferred}}</p>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"damage-l\">Mobile number</p>\n        <p class=\"damage-c\" *ngIf=\"this.reavel\">{{userInfo.contact_mobile}}</p>\n        <p class=\"damage-c\" *ngIf=\"!this.reavel\">{{userInfo.contact_mobile_unreveal}}</p>\n    </div>\n    <p class=\"underline container-ps text-right\" *ngIf=\"!this.reavel\" (click)=\"revealContant()\">Click Here To Reveal</p>\n    <div class=\"row container-ps\">\n        <div class=\"col-md-6 d-flex justify-content-center\">\n            <!-- <div class=\"whatsapp\"></div> -->\n            <i class=\"fa fa-whatsapp othercontact-i\"></i>\n            <p class=\"phone\">{{userInfo.contact_whatsapp}}</p>\n        </div>\n        <div class=\"col-md-6 d-flex justify-content-center\">\n            <!-- <div class=\"wechat\"></div> -->\n            <i class=\"fa fa-weixin othercontact-i\"></i>\n            <p class=\"phone\">{{userInfo.contact_wechat}}</p>\n        </div>\n    </div>\n    <div class=\"container-ps\">\n        <p class=\"others-contact\">OTHERS CONTACTS</p>\n        <div class=\"row others-contact-c m-2\">\n            <div class=\"col-md-6\" *ngFor=\"let contact of userInfo.otherContacts\">\n                <p><img height=\"40px\" [ngStyle]=\"{'background-image': 'url(' + usersService.BASE_URL + contact.icon + ')'}\"><span class=\"phone\">{{contact.content}}</span></p>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1622,10 +1622,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ChangePasswordComponent = class ChangePasswordComponent {
-    constructor(route, formBuilder, UsersService, router) {
+    constructor(route, formBuilder, usersService, router) {
         this.route = route;
         this.formBuilder = formBuilder;
-        this.UsersService = UsersService;
+        this.usersService = usersService;
         this.router = router;
         this.signup = false;
         this.signup_error = "";
@@ -1635,7 +1635,7 @@ let ChangePasswordComponent = class ChangePasswordComponent {
     ngOnInit() {
         this.route.paramMap.subscribe(params => {
             const reset_key = this.route.snapshot.paramMap.get('id');
-            this.UsersService.verifyResetKey(reset_key, (res) => {
+            this.usersService.verifyResetKey(reset_key, (res) => {
                 if (res.success == 1) {
                     this.verified = true;
                     localStorage.setItem('user_id', res.data.user_id);
@@ -1666,7 +1666,7 @@ let ChangePasswordComponent = class ChangePasswordComponent {
         if (this.registerForm.invalid) {
             return;
         }
-        this.UsersService.resetPassword(localStorage.getItem('user_id'), this.registerForm.value.password, this.reset_key, (res) => {
+        this.usersService.resetPassword(localStorage.getItem('user_id'), this.registerForm.value.password, this.reset_key, (res) => {
             if (res.success == 1) {
                 this.success = res.message;
             }
@@ -1778,9 +1778,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let SignComponent = class SignComponent {
-    constructor(formBuilder, UsersService, exchangeService, mapService, router) {
+    constructor(formBuilder, usersService, exchangeService, mapService, router) {
         this.formBuilder = formBuilder;
-        this.UsersService = UsersService;
+        this.usersService = usersService;
         this.exchangeService = exchangeService;
         this.mapService = mapService;
         this.router = router;
@@ -1840,7 +1840,7 @@ let SignComponent = class SignComponent {
             return;
         }
         var userInfo = this.loginForm.value;
-        this.UsersService.signin(userInfo.email, userInfo.password, (res) => {
+        this.usersService.signin(userInfo.email, userInfo.password, (res) => {
             if (res.success == 1) {
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('user_id', res.data.user_id);
@@ -1886,7 +1886,7 @@ let SignComponent = class SignComponent {
             state: this.state
         };
         var userInfo = this.registerForm.value;
-        this.UsersService.signup(userInfo.email, userInfo.firstName, userInfo.lastName, userInfo.password, userInfo.advertise, location, (res) => {
+        this.usersService.signup(userInfo.email, userInfo.firstName, userInfo.lastName, userInfo.password, userInfo.advertise, location, (res) => {
             if (res.success == 1) {
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('user_id', res.data.user_id);
@@ -1905,7 +1905,7 @@ let SignComponent = class SignComponent {
     }
     forgot_password() {
         var userInfo = this.loginForm.value;
-        this.UsersService.forgot_password(userInfo.email, (res) => {
+        this.usersService.forgot_password(userInfo.email, (res) => {
             if (res.success == 1) {
                 this.sent_success = res.message;
                 this.signin_error = '';
@@ -2562,10 +2562,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let HomeComponent = class HomeComponent {
-    constructor(exchangeService, toastr, userService, router) {
+    constructor(exchangeService, toastr, usersService, router) {
         this.exchangeService = exchangeService;
         this.toastr = toastr;
-        this.userService = userService;
+        this.usersService = usersService;
         this.router = router;
         this.showAD = false;
         this.searchFields = {
@@ -2600,7 +2600,7 @@ let HomeComponent = class HomeComponent {
                 $(window).scrollTop(0);
             }
         });
-        this.userService.getGirlsService(localStorage.getItem('user_id'), localStorage.getItem('token'), (services) => {
+        this.usersService.getGirlsService(localStorage.getItem('user_id'), localStorage.getItem('token'), (services) => {
             if (services.success == 1) {
                 this.services = services.data;
             }
@@ -2625,7 +2625,7 @@ let HomeComponent = class HomeComponent {
         setTimeout(() => {
             this.exchangeService.setLoading(true);
         }, 100);
-        this.userService.getTopProfile(localStorage.getItem('user_id'), localStorage.getItem('token'), infor.state, infor.name, infor.ageFrom, infor.ageTo, infor.heightFrom, infor.heightTo, infor.location, services, (resTopProfile) => {
+        this.usersService.getTopProfile(localStorage.getItem('user_id'), localStorage.getItem('token'), infor.state, infor.name, infor.ageFrom, infor.ageTo, infor.heightFrom, infor.heightTo, infor.location, services, (resTopProfile) => {
             if (resTopProfile.success == 1) {
                 this.searchResult = resTopProfile.data;
                 try {
@@ -2634,10 +2634,10 @@ let HomeComponent = class HomeComponent {
                 }
                 catch (error) {
                 }
-                this.userService.getProfileList(localStorage.getItem('user_id'), localStorage.getItem('token'), infor.state, infor.name, infor.ageFrom, infor.ageTo, infor.heightFrom, infor.heightTo, infor.location, services, (resProfiles) => {
+                this.usersService.getProfileList(localStorage.getItem('user_id'), localStorage.getItem('token'), infor.state, infor.name, infor.ageFrom, infor.ageTo, infor.heightFrom, infor.heightTo, infor.location, services, (resProfiles) => {
                     if (resProfiles.success == 1) {
                         this.profilesResult = resProfiles.data;
-                        this.userService.getHistoryList(localStorage.getItem('user_id'), localStorage.getItem('token'), (resHistory) => {
+                        this.usersService.getHistoryList(localStorage.getItem('user_id'), localStorage.getItem('token'), (resHistory) => {
                             if (resHistory.success == 1) {
                                 setTimeout(() => {
                                     this.exchangeService.setLoading(false);
@@ -2669,7 +2669,7 @@ let HomeComponent = class HomeComponent {
         });
     }
     initRecent() {
-        this.userService.getHistoryList(localStorage.getItem('user_id'), localStorage.getItem('token'), (resHistory) => {
+        this.usersService.getHistoryList(localStorage.getItem('user_id'), localStorage.getItem('token'), (resHistory) => {
             if (resHistory.success == 1) {
                 this.historyResult = resHistory.data;
             }
@@ -2734,11 +2734,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let MainComponent = class MainComponent {
-    constructor(exchangeService, router, userservice, userService) {
+    constructor(exchangeService, router, usersService) {
         this.exchangeService = exchangeService;
         this.router = router;
-        this.userservice = userservice;
-        this.userService = userService;
+        this.usersService = usersService;
         this.home = false;
         this.loading = false;
         this.username = "";
@@ -2763,7 +2762,7 @@ let MainComponent = class MainComponent {
     }
     ngOnInit() {
         this.updateThumbnail();
-        this.userservice.getLiveStatus(localStorage.getItem('user_id'), localStorage.getItem('token'), (res) => {
+        this.usersService.getLiveStatus(localStorage.getItem('user_id'), localStorage.getItem('token'), (res) => {
             if (res.success == 1) {
                 this.live = res.data.islive;
             }
@@ -2795,9 +2794,9 @@ let MainComponent = class MainComponent {
         });
     }
     updateThumbnail() {
-        this.userservice.getProfileImage(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), (res) => {
+        this.usersService.getProfileImage(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), (res) => {
             if (res.success == 1) {
-                this.imsUrl = 'http://192.168.1.140:4000/' + res.data.imgurl;
+                this.imsUrl = this.usersService.BASE_URL + res.data.imgurl;
             }
             else if (res.success == -1) {
                 this.router.navigate['sign'];
@@ -2839,7 +2838,7 @@ let MainComponent = class MainComponent {
     openHome() {
         this.home = true;
         this.exchangeService.openHomePage(true);
-        this.userService.getMyProfileDetails(localStorage.getItem('user_id'), localStorage.getItem('token'), (details) => {
+        this.usersService.getMyProfileDetails(localStorage.getItem('user_id'), localStorage.getItem('token'), (details) => {
             if (details.success == 1) {
                 this.states.forEach(element => {
                     if (details.data.locationInfo.state == element.name) {
@@ -2892,7 +2891,6 @@ let MainComponent = class MainComponent {
 MainComponent.ctorParameters = () => [
     { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_3__["DataExchangeService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-    { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"] },
     { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"] }
 ];
 MainComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -3109,13 +3107,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ChangeEmailDialogComponent = class ChangeEmailDialogComponent {
-    constructor(dialogRef, data, formBuilder, exchangeService, toastr, userService, router) {
+    constructor(dialogRef, data, formBuilder, exchangeService, toastr, usersService, router) {
         this.dialogRef = dialogRef;
         this.data = data;
         this.formBuilder = formBuilder;
         this.exchangeService = exchangeService;
         this.toastr = toastr;
-        this.userService = userService;
+        this.usersService = usersService;
         this.router = router;
         this.isRegisterd = false;
     }
@@ -3135,7 +3133,7 @@ let ChangeEmailDialogComponent = class ChangeEmailDialogComponent {
         }
         this.exchangeService.setLoading(true);
         var userInfo = this.registerForm.value;
-        this.userService.changeEmail(localStorage.getItem('user_id'), localStorage.getItem('token'), userInfo.email, (res) => {
+        this.usersService.changeEmail(localStorage.getItem('user_id'), localStorage.getItem('token'), userInfo.email, (res) => {
             if (res.success == 1) {
                 this.toastr.success(res.message);
             }
@@ -3215,10 +3213,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ChangeInfoComponent = class ChangeInfoComponent {
-    constructor(dialog, exchangeService, userService) {
+    constructor(dialog, exchangeService, usersService) {
         this.dialog = dialog;
         this.exchangeService = exchangeService;
-        this.userService = userService;
+        this.usersService = usersService;
         this.selected = 'Min';
         this.on = false;
     }
@@ -3343,10 +3341,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ChangeLocationDialogComponent = class ChangeLocationDialogComponent {
-    constructor(data, exchangeService, userService, toastr, router) {
+    constructor(data, exchangeService, usersService, toastr, router) {
         this.data = data;
         this.exchangeService = exchangeService;
-        this.userService = userService;
+        this.usersService = usersService;
         this.toastr = toastr;
         this.router = router;
     }
@@ -3371,7 +3369,7 @@ let ChangeLocationDialogComponent = class ChangeLocationDialogComponent {
             return;
         }
         this.exchangeService.setLoading(true);
-        this.userService.changeLocation(localStorage.getItem('user_id'), localStorage.getItem('token'), this.data.latitude, this.data.longitude, this.address, this.state, (res) => {
+        this.usersService.changeLocation(localStorage.getItem('user_id'), localStorage.getItem('token'), this.data.latitude, this.data.longitude, this.address, this.state, (res) => {
             if (res.success == 1) {
                 this.toastr.success(res.message);
                 this.exchangeService.refreshEditPage(true);
@@ -3449,12 +3447,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ChangeNameDialogComponent = class ChangeNameDialogComponent {
-    constructor(dialogRef, data, exchangeService, formBuilder, userService, toastr, router) {
+    constructor(dialogRef, data, exchangeService, formBuilder, usersService, toastr, router) {
         this.dialogRef = dialogRef;
         this.data = data;
         this.exchangeService = exchangeService;
         this.formBuilder = formBuilder;
-        this.userService = userService;
+        this.usersService = usersService;
         this.toastr = toastr;
         this.router = router;
         this.isRegisterd = false;
@@ -3476,7 +3474,7 @@ let ChangeNameDialogComponent = class ChangeNameDialogComponent {
         }
         this.exchangeService.setLoading(true);
         var userInfo = this.registerForm.value;
-        this.userService.changeName(localStorage.getItem('user_id'), localStorage.getItem('token'), userInfo.firstname, userInfo.lastname, (res) => {
+        this.usersService.changeName(localStorage.getItem('user_id'), localStorage.getItem('token'), userInfo.firstname, userInfo.lastname, (res) => {
             if (res.success == 1) {
                 this.toastr.success(res.message);
                 this.exchangeService.refreshEditPage(true);
@@ -3554,11 +3552,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ChangePassDialogComponent = class ChangePassDialogComponent {
-    constructor(route, formBuilder, exchangeService, UsersService, router, toastr) {
+    constructor(route, formBuilder, exchangeService, usersService, router, toastr) {
         this.route = route;
         this.formBuilder = formBuilder;
         this.exchangeService = exchangeService;
-        this.UsersService = UsersService;
+        this.usersService = usersService;
         this.router = router;
         this.toastr = toastr;
         this.signup = false;
@@ -3583,7 +3581,7 @@ let ChangePassDialogComponent = class ChangePassDialogComponent {
         }
         var userInfo = this.registerForm.value;
         this.exchangeService.setLoading(true);
-        this.UsersService.changePassword(localStorage.getItem('user_id'), userInfo.oldPassword, userInfo.password, localStorage.getItem('token'), (res) => {
+        this.usersService.changePassword(localStorage.getItem('user_id'), userInfo.oldPassword, userInfo.password, localStorage.getItem('token'), (res) => {
             if (res.success == 1) {
                 this.toastr.success(res.message);
                 this.exchangeService.refreshEditPage(true);
@@ -3920,9 +3918,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let EditComponent = class EditComponent {
-    constructor(exchangeService, userService, toastr, router) {
+    constructor(exchangeService, usersService, toastr, router) {
         this.exchangeService = exchangeService;
-        this.userService = userService;
+        this.usersService = usersService;
         this.toastr = toastr;
         this.router = router;
         this.week = [{ id: 0, name: 'SUN' }, { id: 1, name: 'MON' }, { id: 2, name: 'TUE' }, { id: 3, name: 'WED' }, { id: 4, name: 'THU' }, { id: 5, name: 'FRI' }, { id: 6, name: 'SAT' }];
@@ -3944,7 +3942,7 @@ let EditComponent = class EditComponent {
         setTimeout(() => {
             this.exchangeService.setLoading(true);
         }, 100);
-        this.userService.getWorkHours(localStorage.getItem('user_id'), localStorage.getItem('token'), (hours) => {
+        this.usersService.getWorkHours(localStorage.getItem('user_id'), localStorage.getItem('token'), (hours) => {
             if (hours.success == 0) {
                 return;
             }
@@ -3988,7 +3986,7 @@ let EditComponent = class EditComponent {
                 schedul.formatFrom = formatFrom;
                 schedul.formatTo = formatTo;
             });
-            this.userService.getAdminFields(localStorage.getItem('user_id'), localStorage.getItem('token'), (adminfields) => {
+            this.usersService.getAdminFields(localStorage.getItem('user_id'), localStorage.getItem('token'), (adminfields) => {
                 if (adminfields.success == 0) {
                     return;
                 }
@@ -3996,7 +3994,7 @@ let EditComponent = class EditComponent {
                     this.router.navigate['sign'];
                     return;
                 }
-                this.userService.getMyProfileDetails(localStorage.getItem('user_id'), localStorage.getItem('token'), (details) => {
+                this.usersService.getMyProfileDetails(localStorage.getItem('user_id'), localStorage.getItem('token'), (details) => {
                     if (details.success == 1) {
                         var selected = "";
                         this.details = details;
@@ -4005,7 +4003,7 @@ let EditComponent = class EditComponent {
                         this.details_data.height_error = false;
                         console.log(this.details_data);
                         this.details_data.galleries.forEach(element => {
-                            element.imgurl = 'http://192.168.1.140:4000/' + element.imgurl;
+                            element.imgurl = this.usersService.BASE_URL + element.imgurl;
                         });
                         console.log(this.details_data);
                         this.exchangeService.InitUsername(this.details_data.firstname + " " + this.details_data.lastname);
@@ -4096,7 +4094,7 @@ let EditComponent = class EditComponent {
         });
         if (errorCount > 0)
             return;
-        this.userService.completeProfile(user_id, token, birthday, height, mobile, wechat, whatsapp, preferred, workhours, adminFields, otherContacts, (res) => {
+        this.usersService.completeProfile(user_id, token, birthday, height, mobile, wechat, whatsapp, preferred, workhours, adminFields, otherContacts, (res) => {
             if (res.success == 1) {
                 this.toastr.success(res.message);
                 this.exchangeService.refreshEditPage(true);
@@ -4162,10 +4160,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let PhotoGalleryComponent = class PhotoGalleryComponent {
-    constructor(exchangeService, toastr, userService, router) {
+    constructor(exchangeService, toastr, usersService, router) {
         this.exchangeService = exchangeService;
         this.toastr = toastr;
-        this.userService = userService;
+        this.usersService = usersService;
         this.router = router;
         this.croppedImage = "../../../../assets/img/avatar.png";
     }
@@ -4192,7 +4190,7 @@ let PhotoGalleryComponent = class PhotoGalleryComponent {
             this.galleries.push(data);
             //call api
             this.exchangeService.setLoading(true);
-            this.userService.uploadGallery(localStorage.getItem('user_id'), localStorage.getItem('token'), files[0], (res) => {
+            this.usersService.uploadGallery(localStorage.getItem('user_id'), localStorage.getItem('token'), files[0], (res) => {
                 if (res.success == 1) {
                     this.toastr.success(res.message);
                     this.exchangeService.refreshEditPage(true);
@@ -4215,7 +4213,7 @@ let PhotoGalleryComponent = class PhotoGalleryComponent {
     }
     deleteIamge(id) {
         this.exchangeService.setLoading(true);
-        this.userService.deleteGallery(localStorage.getItem('user_id'), localStorage.getItem('token'), id, (res) => {
+        this.usersService.deleteGallery(localStorage.getItem('user_id'), localStorage.getItem('token'), id, (res) => {
             if (res.success == 1) {
                 this.toastr.success(res.message);
                 this.exchangeService.refreshEditPage(true);
@@ -4234,7 +4232,7 @@ let PhotoGalleryComponent = class PhotoGalleryComponent {
     }
     onLock(event) {
         this.exchangeService.setLoading(true);
-        this.userService.lockGallery(localStorage.getItem('user_id'), localStorage.getItem('token'), event.id, event.val, (res) => {
+        this.usersService.lockGallery(localStorage.getItem('user_id'), localStorage.getItem('token'), event.id, event.val, (res) => {
             if (res.success == 1) {
                 this.toastr.success(res.message);
                 this.exchangeService.refreshEditPage(true);
@@ -4309,10 +4307,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let SelectImageDialogComponent = class SelectImageDialogComponent {
-    constructor(data, exchangeService, userService, toastr, router) {
+    constructor(data, exchangeService, usersService, toastr, router) {
         this.data = data;
         this.exchangeService = exchangeService;
-        this.userService = userService;
+        this.usersService = usersService;
         this.toastr = toastr;
         this.router = router;
         this.selected = false;
@@ -4345,9 +4343,9 @@ let SelectImageDialogComponent = class SelectImageDialogComponent {
     }
     uploadImage() {
         this.exchangeService.setLoading(true);
-        this.userService.uploadProfileImage(localStorage.getItem('user_id'), localStorage.getItem('token'), this.file, this.imgcode, (res) => {
+        this.usersService.uploadProfileImage(localStorage.getItem('user_id'), localStorage.getItem('token'), this.file, this.imgcode, (res) => {
             if (res.success == 1) {
-                this.userService.updateImageCode(localStorage.getItem('user_id'), localStorage.getItem('token'), this.imgcode, (res) => {
+                this.usersService.updateImageCode(localStorage.getItem('user_id'), localStorage.getItem('token'), this.imgcode, (res) => {
                     if (res.success == 1) {
                         this.toastr.success(res.message);
                         this.exchangeService.changeThumbnail(true);
@@ -4790,11 +4788,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let PreviewCommentsChatComponent = class PreviewCommentsChatComponent {
-    constructor(exchangeService, formBuilder, toastr, userService, router) {
+    constructor(exchangeService, formBuilder, toastr, usersService, router) {
         this.exchangeService = exchangeService;
         this.formBuilder = formBuilder;
         this.toastr = toastr;
-        this.userService = userService;
+        this.usersService = usersService;
         this.router = router;
         this.submit = false;
         this.comments = [];
@@ -4806,7 +4804,7 @@ let PreviewCommentsChatComponent = class PreviewCommentsChatComponent {
         });
         //call api
         // this.exchangeService.setLoading(true);
-        this.userService.getComments(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), 0, (res) => {
+        this.usersService.getComments(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), 0, (res) => {
             if (res.success == 1) {
                 this.comments = res.data;
                 console.log(this.comments);
@@ -4901,11 +4899,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let PreviewCommentsComplaintsComponent = class PreviewCommentsComplaintsComponent {
-    constructor(exchangeService, formBuilder, toastr, userService, router) {
+    constructor(exchangeService, formBuilder, toastr, usersService, router) {
         this.exchangeService = exchangeService;
         this.formBuilder = formBuilder;
         this.toastr = toastr;
-        this.userService = userService;
+        this.usersService = usersService;
         this.router = router;
         this.submit = false;
         this.comments = [];
@@ -4917,7 +4915,7 @@ let PreviewCommentsComplaintsComponent = class PreviewCommentsComplaintsComponen
         });
         //call api
         // this.exchangeService.setLoading(true);
-        this.userService.getComments(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), 1, (res) => {
+        this.usersService.getComments(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), 1, (res) => {
             if (res.success == 1) {
                 this.comments = res.data;
                 console.log(this.comments);
@@ -5050,9 +5048,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let PreviewImageGalleryComponent = class PreviewImageGalleryComponent {
-    constructor(exchangeService, userService, router) {
+    constructor(exchangeService, usersService, router) {
         this.exchangeService = exchangeService;
-        this.userService = userService;
+        this.usersService = usersService;
         this.router = router;
         this.images = [
             { id: "0", locked: false, croppedImage: "../../../../assets/img/avatar.png" },
@@ -5063,7 +5061,7 @@ let PreviewImageGalleryComponent = class PreviewImageGalleryComponent {
         ];
     }
     ngOnInit() {
-        this.userService.getMyProfileDetails(localStorage.getItem('user_id'), localStorage.getItem('token'), (details) => {
+        this.usersService.getMyProfileDetails(localStorage.getItem('user_id'), localStorage.getItem('token'), (details) => {
             if (details.success == 1) {
                 this.galleries = details.data.galleries;
             }
@@ -5124,9 +5122,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let PreviewPersionalInfoComponent = class PreviewPersionalInfoComponent {
-    constructor(exchangeService, userService, toastr, router) {
+    constructor(exchangeService, usersService, toastr, router) {
         this.exchangeService = exchangeService;
-        this.userService = userService;
+        this.usersService = usersService;
         this.toastr = toastr;
         this.router = router;
     }
@@ -5134,7 +5132,7 @@ let PreviewPersionalInfoComponent = class PreviewPersionalInfoComponent {
         setTimeout(() => {
             this.exchangeService.setLoading(true);
         }, 100);
-        this.userService.getMyProfileDetails(localStorage.getItem('user_id'), localStorage.getItem('token'), (details) => {
+        this.usersService.getMyProfileDetails(localStorage.getItem('user_id'), localStorage.getItem('token'), (details) => {
             if (details.success == 1) {
                 this.userinfo = details.data;
                 this.exchangeService.InitUsername(this.userinfo.firstname + " " + this.userinfo.lastname);
@@ -5269,9 +5267,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let PreviewWorkHourComponent = class PreviewWorkHourComponent {
-    constructor(exchangeService, userService, router) {
+    constructor(exchangeService, usersService, router) {
         this.exchangeService = exchangeService;
-        this.userService = userService;
+        this.usersService = usersService;
         this.router = router;
         this.week = [{ id: 0, name: 'SUN' }, { id: 1, name: 'MON' }, { id: 2, name: 'TUE' }, { id: 3, name: 'WED' }, { id: 4, name: 'THU' }, { id: 5, name: 'FRI' }, { id: 6, name: 'SAT' }];
         this.hour = [{ id: 1, name: '1' }, { id: 2, name: '2' }, { id: 3, name: '3' }, { id: 4, name: '4' }, { id: 5, name: '5' }, { id: 6, name: '6' }, { id: 7, name: '7' }, { id: 8, name: '8' }, { id: 9, name: '9' }, { id: 10, name: '10' }, { id: 11, name: '11' }, { id: 12, name: '12' }];
@@ -5282,7 +5280,7 @@ let PreviewWorkHourComponent = class PreviewWorkHourComponent {
         setTimeout(() => {
             this.exchangeService.setLoading(true);
         }, 100);
-        this.userService.getWorkHours(localStorage.getItem('user_id'), localStorage.getItem('token'), (hours) => {
+        this.usersService.getWorkHours(localStorage.getItem('user_id'), localStorage.getItem('token'), (hours) => {
             if (hours.success == 0) {
                 return;
             }
@@ -5568,8 +5566,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let LiveComponent = class LiveComponent {
-    constructor(userService, toastr, router) {
-        this.userService = userService;
+    constructor(usersService, toastr, router) {
+        this.usersService = usersService;
         this.toastr = toastr;
         this.router = router;
         this.liveStatus = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
@@ -5578,7 +5576,7 @@ let LiveComponent = class LiveComponent {
     }
     setLive() {
         if (this.liveStatus) {
-            this.userService.goLive(localStorage.getItem('user_id'), localStorage.getItem('token'), (res) => {
+            this.usersService.goLive(localStorage.getItem('user_id'), localStorage.getItem('token'), (res) => {
                 if (res.success == 1) {
                     this.toastr.success(res.message);
                     this.liveStatus.emit(true);
@@ -5646,9 +5644,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let NavigationComponent = class NavigationComponent {
-    constructor(exchangeService, userService) {
+    constructor(exchangeService, usersService) {
         this.exchangeService = exchangeService;
-        this.userService = userService;
+        this.usersService = usersService;
         this.navs = [
             { id: 'nav0', name: "PREVIEW", active: false },
             { id: 'nav1', name: "EDIT", active: false },
@@ -5790,11 +5788,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ViewProfileCommentsChatComponent = class ViewProfileCommentsChatComponent {
-    constructor(exchangeService, formBuilder, toastr, userService, router) {
+    constructor(exchangeService, formBuilder, toastr, usersService, router) {
         this.exchangeService = exchangeService;
         this.formBuilder = formBuilder;
         this.toastr = toastr;
-        this.userService = userService;
+        this.usersService = usersService;
         this.router = router;
         this.submit = false;
         this.comments = [];
@@ -5806,7 +5804,7 @@ let ViewProfileCommentsChatComponent = class ViewProfileCommentsChatComponent {
         });
         //call api
         // this.exchangeService.setLoading(true);
-        this.userService.getComments(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), 0, (res) => {
+        this.usersService.getComments(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), 0, (res) => {
             if (res.success == 1) {
                 this.comments = res.data;
                 console.log(this.comments);
@@ -5911,11 +5909,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ViewProfileCommentsComplaintsComponent = class ViewProfileCommentsComplaintsComponent {
-    constructor(exchangeService, formBuilder, toastr, userService, router) {
+    constructor(exchangeService, formBuilder, toastr, usersService, router) {
         this.exchangeService = exchangeService;
         this.formBuilder = formBuilder;
         this.toastr = toastr;
-        this.userService = userService;
+        this.usersService = usersService;
         this.router = router;
         this.submit = false;
         this.comments = [];
@@ -5927,7 +5925,7 @@ let ViewProfileCommentsComplaintsComponent = class ViewProfileCommentsComplaints
         });
         //call api
         // this.exchangeService.setLoading(true);
-        this.userService.getComments(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), 1, (res) => {
+        this.usersService.getComments(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('user_id'), 1, (res) => {
             if (res.success == 1) {
                 this.comments = res.data;
                 console.log(this.comments);
@@ -6642,8 +6640,9 @@ __webpack_require__.r(__webpack_exports__);
 let UsersService = class UsersService {
     constructor(http) {
         this.http = http;
-        // uri = 'http://192.168.1.140:4000/api';
-        this.uri = 'http://192.168.1.140:4000/api';
+        // public BASE_URL = 'http://192.168.1.140:4000/';
+        this.BASE_URL = 'http://149.28.162.129:4000/';
+        this.uri = this.BASE_URL + 'api';
     }
     getArgHeaders() {
         const httpOptions = {
