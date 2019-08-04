@@ -5193,22 +5193,15 @@ var DashboardComponent = /** @class */ (function () {
         //start animation for the Emails Subscription Chart
         this.startAnimationForBarChart(websiteViewsChart);
         //call api
-        this.exchangeService.setLoading(true);
         this.usersService.getAdminUsersCount(localStorage.getItem('user_id'), localStorage.getItem('token'), function (res) {
             if (res.success == 1) {
-                _this.toastr.success(res.message);
                 _this.userData = res.data;
             }
             else if (res.success == 0) {
-                _this.toastr.error(res.message);
             }
             else if (res.success == -1) {
-                _this.toastr.error(res.message);
                 _this.router.navigate['sign'];
             }
-            setTimeout(function () {
-                _this.exchangeService.setLoading(false);
-            }, 1000);
         });
     };
     DashboardComponent.ctorParameters = function () { return [
@@ -5915,15 +5908,11 @@ var UserListComponent = /** @class */ (function () {
         this.exchangeService.setLoading(true);
         this.usersService.getAdminUserList(localStorage.getItem('user_id'), localStorage.getItem('token'), function (res) {
             if (res.success == 1) {
-                _this.toastr.success(res.message);
                 _this.userData = res.data;
-                console.log(_this.userData);
             }
             else if (res.success == 0) {
-                _this.toastr.error(res.message);
             }
             else if (res.success == -1) {
-                _this.toastr.error(res.message);
                 _this.router.navigate['sign'];
             }
             setTimeout(function () {
@@ -6014,15 +6003,11 @@ var UserProfileComponent = /** @class */ (function () {
         this.exchangeService.setLoading(true);
         this.usersService.getAdminProfile(localStorage.getItem('user_id'), localStorage.getItem('token'), function (res) {
             if (res.success == 1) {
-                _this.toastr.success(res.message);
                 _this.userData = res.data;
-                console.log(_this.userData);
             }
             else if (res.success == 0) {
-                _this.toastr.error(res.message);
             }
             else if (res.success == -1) {
-                _this.toastr.error(res.message);
                 _this.router.navigate['sign'];
             }
             setTimeout(function () {

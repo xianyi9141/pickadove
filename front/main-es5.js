@@ -2122,12 +2122,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/service/data-exchange.service */ "./src/app/service/data-exchange.service.ts");
+/* harmony import */ var src_app_service_users_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/service/users.service */ "./src/app/service/users.service.ts");
+
 
 
 
 var HomeGalleryComponent = /** @class */ (function () {
-    function HomeGalleryComponent(exchangeService) {
+    function HomeGalleryComponent(exchangeService, usersService) {
         this.exchangeService = exchangeService;
+        this.usersService = usersService;
     }
     HomeGalleryComponent.prototype.ngOnInit = function () {
     };
@@ -2136,7 +2139,8 @@ var HomeGalleryComponent = /** @class */ (function () {
         this.exchangeService.openViewProfile(id);
     };
     HomeGalleryComponent.ctorParameters = function () { return [
-        { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__["DataExchangeService"] }
+        { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__["DataExchangeService"] },
+        { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -2223,12 +2227,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/service/data-exchange.service */ "./src/app/service/data-exchange.service.ts");
+/* harmony import */ var src_app_service_users_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/service/users.service */ "./src/app/service/users.service.ts");
+
 
 
 
 var HomeRecentProfilesComponent = /** @class */ (function () {
-    function HomeRecentProfilesComponent(exchangeService) {
+    function HomeRecentProfilesComponent(exchangeService, usersService) {
         this.exchangeService = exchangeService;
+        this.usersService = usersService;
     }
     HomeRecentProfilesComponent.prototype.ngOnInit = function () {
     };
@@ -2237,7 +2244,8 @@ var HomeRecentProfilesComponent = /** @class */ (function () {
         this.exchangeService.openViewProfile(id);
     };
     HomeRecentProfilesComponent.ctorParameters = function () { return [
-        { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__["DataExchangeService"] }
+        { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__["DataExchangeService"] },
+        { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -3935,13 +3943,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/service/data-exchange.service */ "./src/app/service/data-exchange.service.ts");
+/* harmony import */ var src_app_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/service/users.service */ "./src/app/service/users.service.ts");
+
 
 
 
 
 var EditInfoComponent = /** @class */ (function () {
-    function EditInfoComponent(dataExhane) {
+    function EditInfoComponent(dataExhane, usersService) {
         this.dataExhane = dataExhane;
+        this.usersService = usersService;
         this.date = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](new Date());
         this.serializedDate = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]((new Date()).toISOString());
     }
@@ -3958,7 +3969,8 @@ var EditInfoComponent = /** @class */ (function () {
         event.object.content = event.val;
     };
     EditInfoComponent.ctorParameters = function () { return [
-        { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_3__["DataExchangeService"] }
+        { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_3__["DataExchangeService"] },
+        { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -5876,14 +5888,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewProfileAvatarComponent", function() { return ViewProfileAvatarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_service_users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/service/users.service */ "./src/app/service/users.service.ts");
+
 
 
 var ViewProfileAvatarComponent = /** @class */ (function () {
-    function ViewProfileAvatarComponent() {
+    function ViewProfileAvatarComponent(usersService) {
+        this.usersService = usersService;
         this.data = { croppedImage: "../../../../assets/img/avatar.png" };
     }
     ViewProfileAvatarComponent.prototype.ngOnInit = function () {
     };
+    ViewProfileAvatarComponent.ctorParameters = function () { return [
+        { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
     ], ViewProfileAvatarComponent.prototype, "userInfo", void 0);
@@ -6479,14 +6497,13 @@ var ViewProfileComponent = /** @class */ (function () {
         this.userservice.getProfileDetailsById(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('view_id'), function (details) {
             if (details.success == 1) {
                 _this.details = details.data;
-                console.log(_this.details);
                 try {
                     var phone_hidden_number = _this.details.contact_mobile.substring(0, 3) + "XXXX";
                     _this.details.contact_mobile_unreveal = phone_hidden_number;
                 }
                 catch (error) {
                 }
-                _this.details.workhours.forEach(function (element) {
+                details.data.workhours.forEach(function (element) {
                     var schedule = {
                         isPmFrom: _this.timeFormat[element.isPmFrom].name,
                         isPmTo: _this.timeFormat[element.isPmTo].name,

@@ -27,8 +27,8 @@ function getWorkHoursByUserId(user_id, callback) {
     db.query(query, function (err, results, fields) {
         if (err) callback(err, null)
         else {
-            if (results.length == 0) callback(null, 0)
-            else callback(null, results)
+            // if (results.length == 0) callback(null, 0)
+            callback(null, results)
         }
     })
 }

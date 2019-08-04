@@ -5183,22 +5183,15 @@ let DashboardComponent = class DashboardComponent {
         //start animation for the Emails Subscription Chart
         this.startAnimationForBarChart(websiteViewsChart);
         //call api
-        this.exchangeService.setLoading(true);
         this.usersService.getAdminUsersCount(localStorage.getItem('user_id'), localStorage.getItem('token'), (res) => {
             if (res.success == 1) {
-                this.toastr.success(res.message);
                 this.userData = res.data;
             }
             else if (res.success == 0) {
-                this.toastr.error(res.message);
             }
             else if (res.success == -1) {
-                this.toastr.error(res.message);
                 this.router.navigate['sign'];
             }
-            setTimeout(() => {
-                this.exchangeService.setLoading(false);
-            }, 1000);
         });
     }
 };
@@ -5881,15 +5874,11 @@ let UserListComponent = class UserListComponent {
         this.exchangeService.setLoading(true);
         this.usersService.getAdminUserList(localStorage.getItem('user_id'), localStorage.getItem('token'), (res) => {
             if (res.success == 1) {
-                this.toastr.success(res.message);
                 this.userData = res.data;
-                console.log(this.userData);
             }
             else if (res.success == 0) {
-                this.toastr.error(res.message);
             }
             else if (res.success == -1) {
-                this.toastr.error(res.message);
                 this.router.navigate['sign'];
             }
             setTimeout(() => {
@@ -5978,15 +5967,11 @@ let UserProfileComponent = class UserProfileComponent {
         this.exchangeService.setLoading(true);
         this.usersService.getAdminProfile(localStorage.getItem('user_id'), localStorage.getItem('token'), (res) => {
             if (res.success == 1) {
-                this.toastr.success(res.message);
                 this.userData = res.data;
-                console.log(this.userData);
             }
             else if (res.success == 0) {
-                this.toastr.error(res.message);
             }
             else if (res.success == -1) {
-                this.toastr.error(res.message);
                 this.router.navigate['sign'];
             }
             setTimeout(() => {

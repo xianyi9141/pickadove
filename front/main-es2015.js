@@ -2081,12 +2081,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/service/data-exchange.service */ "./src/app/service/data-exchange.service.ts");
+/* harmony import */ var src_app_service_users_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/service/users.service */ "./src/app/service/users.service.ts");
+
 
 
 
 let HomeGalleryComponent = class HomeGalleryComponent {
-    constructor(exchangeService) {
+    constructor(exchangeService, usersService) {
         this.exchangeService = exchangeService;
+        this.usersService = usersService;
     }
     ngOnInit() {
     }
@@ -2096,7 +2099,8 @@ let HomeGalleryComponent = class HomeGalleryComponent {
     }
 };
 HomeGalleryComponent.ctorParameters = () => [
-    { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__["DataExchangeService"] }
+    { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__["DataExchangeService"] },
+    { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -2179,12 +2183,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/service/data-exchange.service */ "./src/app/service/data-exchange.service.ts");
+/* harmony import */ var src_app_service_users_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/service/users.service */ "./src/app/service/users.service.ts");
+
 
 
 
 let HomeRecentProfilesComponent = class HomeRecentProfilesComponent {
-    constructor(exchangeService) {
+    constructor(exchangeService, usersService) {
         this.exchangeService = exchangeService;
+        this.usersService = usersService;
     }
     ngOnInit() {
     }
@@ -2194,7 +2201,8 @@ let HomeRecentProfilesComponent = class HomeRecentProfilesComponent {
     }
 };
 HomeRecentProfilesComponent.ctorParameters = () => [
-    { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__["DataExchangeService"] }
+    { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_2__["DataExchangeService"] },
+    { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -3840,13 +3848,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/service/data-exchange.service */ "./src/app/service/data-exchange.service.ts");
+/* harmony import */ var src_app_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/service/users.service */ "./src/app/service/users.service.ts");
+
 
 
 
 
 let EditInfoComponent = class EditInfoComponent {
-    constructor(dataExhane) {
+    constructor(dataExhane, usersService) {
         this.dataExhane = dataExhane;
+        this.usersService = usersService;
         this.date = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](new Date());
         this.serializedDate = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]((new Date()).toISOString());
     }
@@ -3864,7 +3875,8 @@ let EditInfoComponent = class EditInfoComponent {
     }
 };
 EditInfoComponent.ctorParameters = () => [
-    { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_3__["DataExchangeService"] }
+    { type: src_app_service_data_exchange_service__WEBPACK_IMPORTED_MODULE_3__["DataExchangeService"] },
+    { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -5728,15 +5740,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewProfileAvatarComponent", function() { return ViewProfileAvatarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_service_users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/service/users.service */ "./src/app/service/users.service.ts");
+
 
 
 let ViewProfileAvatarComponent = class ViewProfileAvatarComponent {
-    constructor() {
+    constructor(usersService) {
+        this.usersService = usersService;
         this.data = { croppedImage: "../../../../assets/img/avatar.png" };
     }
     ngOnInit() {
     }
 };
+ViewProfileAvatarComponent.ctorParameters = () => [
+    { type: src_app_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"] }
+];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
 ], ViewProfileAvatarComponent.prototype, "userInfo", void 0);
@@ -6308,14 +6326,13 @@ let ViewProfileComponent = class ViewProfileComponent {
         this.userservice.getProfileDetailsById(localStorage.getItem('user_id'), localStorage.getItem('token'), localStorage.getItem('view_id'), (details) => {
             if (details.success == 1) {
                 this.details = details.data;
-                console.log(this.details);
                 try {
                     var phone_hidden_number = this.details.contact_mobile.substring(0, 3) + "XXXX";
                     this.details.contact_mobile_unreveal = phone_hidden_number;
                 }
                 catch (error) {
                 }
-                this.details.workhours.forEach((element) => {
+                details.data.workhours.forEach((element) => {
                     var schedule = {
                         isPmFrom: this.timeFormat[element.isPmFrom].name,
                         isPmTo: this.timeFormat[element.isPmTo].name,
